@@ -1,0 +1,7 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else }}{{ .Title }} | Osteopatree{{ end }}</title>
+<meta name="description" content="{{ .Params.description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ $css := resources.Get "css/main.css" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">

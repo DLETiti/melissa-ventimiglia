@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "nav.html" . }}
+
+<section class="section section--hero">
+  <div class="wrap">
+    <h1>{{ .Title }}</h1>
+    {{ if .Site.Params.tagline }}<p>{{ .Site.Params.tagline }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="wrap">
+    {{ .Content }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+</body>
+</html>

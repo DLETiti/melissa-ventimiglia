@@ -1,0 +1,13 @@
+<nav class="site-nav">
+  <a href="{{ "/" | relURL }}" class="site-nav__brand">Osteopatree</a>
+  <div class="site-nav__links">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <a href="{{ "/about/" | relURL }}">About Melissa</a>
+    <a href="{{ "/how-it-works/" | relURL }}">How It Works</a>
+    <a href="{{ "/workshops/" | relURL }}">Workshops</a>
+    {{ if .Site.Params.book_visible }}
+    <a href="{{ "/book/" | relURL }}">Book</a>
+    {{ end }}
+    <a href="{{ "/contact/" | relURL }}">Contact</a>
+  </div>
+</nav>

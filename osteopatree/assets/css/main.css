@@ -1,0 +1,132 @@
+/* =====================================================================
+   OSTEOPATREE — main.css
+   -----------------------------------------------------------------
+   PLACEHOLDER PALETTE — DO NOT TREAT AS PRODUCTION VALUES.
+   Only the palette NAME (Living Canopy: forest green / cream /
+   root-brown / gold accent) is locked. Exact hex values and the
+   typeface have not been confirmed by Melissa. Values below are
+   provisional approximations for scaffold/structure review only —
+   same gap pattern as Astrid's pre-CSS typography confirmation.
+   Route an HR to Melissa V for confirmed hex + font before this
+   becomes a production stylesheet.
+   ===================================================================== */
+
+:root {
+  /* --- PLACEHOLDER Living Canopy palette --- */
+  --color-forest: #2F4A3D;      /* PLACEHOLDER */
+  --color-cream: #F7F3EA;       /* PLACEHOLDER */
+  --color-root-brown: #6B4A34;  /* PLACEHOLDER */
+  --color-gold: #C9A24B;        /* PLACEHOLDER */
+  --color-text: #232323;
+  --color-white: #FFFFFF;
+
+  /* --- PLACEHOLDER typography — font family unconfirmed --- */
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: var(--font-body);
+
+  /* Type scale per Website Services Design Standards §4 */
+  --h1-desktop: 52px;
+  --h1-mobile: 34px;
+  --h2-desktop: 36px;
+  --h2-mobile: 26px;
+  --h3-desktop: 26px;
+  --h3-mobile: 21px;
+  --body-desktop: 17px;
+  --body-mobile: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--body-desktop);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-cream);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: var(--h1-mobile); }
+h2 { font-size: var(--h2-mobile); }
+h3 { font-size: var(--h3-mobile); }
+
+@media (min-width: 768px) {
+  h1 { font-size: var(--h1-desktop); }
+  h2 { font-size: var(--h2-desktop); }
+  h3 { font-size: var(--h3-desktop); }
+  body { font-size: var(--body-desktop); }
+}
+
+/* Section background alternation — Design Standards §3, client-palette override */
+.section--light { background: var(--color-white); }
+.section--tint  { background: var(--color-cream); }
+.section--hero,
+.section--cta {
+  background: var(--color-forest);
+  color: var(--color-white);
+}
+.section--hero a,
+.section--cta a { color: var(--color-gold); }
+
+/* Layout */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section { padding: 64px 0; }
+
+/* Nav */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--color-white);
+}
+.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin-left: 20px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.site-nav__brand { font-weight: 700; }
+
+/* CTA buttons — 44x44 minimum tap target per Mobile-First spec */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: var(--color-gold);
+  color: var(--color-forest);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Placeholder content flags — visible during content-gate review only;
+   remove this rule once all [PLACEHOLDER] copy is replaced with final text */
+.content-placeholder {
+  border-left: 3px solid var(--color-gold);
+  padding-left: 12px;
+  background: rgba(201, 162, 75, 0.08);
+}
+
+footer.site-footer {
+  padding: 32px 20px;
+  text-align: center;
+  font-size: 14px;
+  background: var(--color-root-brown);
+  color: var(--color-white);
+}
+footer.site-footer a { color: var(--color-white); }

@@ -1,0 +1,18 @@
+baseURL = "https://osteopatree.netlify.app/"
+languageCode = "en-us"
+title = "Osteopatree"
+
+[params]
+  # PLACEHOLDER — awaiting Melissa's logo asset. Do not launch without both set.
+  logo = "img/logo.png"
+  logo_small = "img/logo-icon.png"
+
+  # Book page visibility toggle — per locked IA decision (toggleable, mechanism
+  # determined at build phase). Set to false to hide Book from nav without
+  # removing the page/content.
+  book_visible = true
+
+  tagline = "Learn your body's language through trees"
+
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,21 @@
+[build]
+  command = "hugo --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.152.2"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+  HUGO_BASEURL = "$DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+  HUGO_BASEURL = "$DEPLOY_PRIME_URL"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
