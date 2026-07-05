@@ -1,6 +1,7 @@
 baseURL = "https://osteopatree.netlify.app/"
 languageCode = "en-us"
 title = "Osteopatree"
+disableKinds = ["taxonomy", "term"]
 
 [params]
   # PLACEHOLDER — awaiting Melissa's logo asset. Do not launch without both set.
