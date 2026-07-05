@@ -130,3 +130,40 @@ footer.site-footer {
   color: var(--color-white);
 }
 footer.site-footer a { color: var(--color-white); }
+
+
+/* Workshops — Upcoming Sessions list (Option C: structured list + per-session Cal.com booking) */
+.session-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+}
+
+.session-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-root-brown);
+  border-radius: 4px;
+  background: var(--color-white);
+}
+
+.session-date {
+  font-weight: 600;
+  color: var(--color-forest);
+  margin: 0 0 4px;
+}
+
+.session-location {
+  color: var(--color-text);
+  margin: 0;
+}
+
+.no-sessions {
+  font-style: italic;
+  color: var(--color-text);
+}

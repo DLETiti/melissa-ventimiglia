@@ -1,0 +1,19 @@
+# data/workshops.yaml
+#
+# Session instances for the Workshops page. Structure/description is
+# fixed (content/workshops.md) — only date, location, and booking link
+# vary per session. Add a new entry under `sessions` each time Melissa
+# confirms a real session; do not add placeholder entries here, since
+# the page is live (draft: false) and anything listed here renders
+# publicly.
+
+sessions: []
+
+# Example entry to copy when a real session is confirmed:
+# sessions:
+#   - id: "2026-09-workshop"
+#     date: "2026-09-12"
+#     time: "10:00 AM-12:00 PM"
+#     location: "Forest Hills, Queens, NY"
+#     cal_link: "https://cal.com/osteopatree/tree-palpating"
+#     status: "upcoming"

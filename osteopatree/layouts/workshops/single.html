@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "nav.html" . }}
+
+<section class="section section--light">
+  <div class="wrap">
+    <h1>{{ .Params.headline | default .Title }}</h1>
+    {{ if .Params.placeholder }}
+    <p class="content-placeholder"><strong>Draft status:</strong> {{ .Params.placeholder }}</p>
+    {{ end }}
+    {{ .Content }}
+
+    <h2>Upcoming Sessions</h2>
+    {{ $upcoming := where .Site.Data.workshops.sessions "status" "upcoming" }}
+    {{ if $upcoming }}
+    <ul class="session-list">
+      {{ range $upcoming }}
+      <li class="session-card">
+        <div class="session-details">
+          <p class="session-date">{{ .date }}{{ with .time }} - {{ . }}{{ end }}</p>
+          <p class="session-location">{{ .location }}</p>
+        </div>
+        <a class="btn" href="{{ .cal_link }}" target="_blank" rel="noopener">Book this session</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <p class="no-sessions">No sessions currently scheduled — check back soon.</p>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+</body>
+</html>
