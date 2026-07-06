@@ -1,0 +1,75 @@
+/* ============================================================
+   DLE_Web_VisualTokens_Osteopatree_v1_0.css
+   Osteopatree (Melissa Ventimiglia) — Living Canopy Visual Tokens
+   Source: Visual Direction Handoff + Addendum 01 (Extended Palette & Typography)
+   Scope: Osteopatree client site only — NOT DLE brand governance
+   ============================================================ */
+
+:root {
+  /* ---- Living Canopy — Green family (locked anchors + confirmed HSL blend) ---- */
+  --op-forest-green: #2D4A3E;   /* locked anchor */
+  --op-moss:         #527A56;
+  --op-sage:         #8DA580;
+  --op-lichen:       #C5C8B7;
+  --op-warm-cream:   #F5EFE0;   /* locked anchor */
+
+  /* ---- Living Canopy — Earth family (locked anchors + confirmed HSL blend) ---- */
+  --op-root-brown:   #6B4A3A;   /* locked anchor */
+  --op-bark:         #855C40;
+  --op-sand:         #A07145;
+  --op-warm-stone:   #BB894A;
+  --op-gold-accent:  #C9A15C;   /* locked anchor */
+
+  /* ---- Typography (net-new, Addendum 01) ---- */
+  --op-font-heading: "Piazzolla", Georgia, serif;
+  --op-font-body:    "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ---- Gradients (usage-restricted: hero sections + educational diagrams ONLY.
+         Never apply to icons, nav, buttons, or small UI elements — solid color only there.) ---- */
+  --op-gradient-forest-depth:     linear-gradient(135deg, var(--op-forest-green), var(--op-moss), var(--op-sage));
+  --op-gradient-canopy-light:     linear-gradient(135deg, var(--op-moss), var(--op-lichen), var(--op-warm-cream));
+  --op-gradient-earth-to-growth:  linear-gradient(135deg, var(--op-root-brown), var(--op-moss), var(--op-sage));
+  --op-gradient-light-in-canopy:  linear-gradient(135deg, var(--op-sage), var(--op-warm-cream), var(--op-gold-accent));
+  --op-gradient-warm-earth:       linear-gradient(135deg, var(--op-root-brown), var(--op-bark), var(--op-sand), var(--op-warm-stone));
+
+  /* ---- Accessibility floor (carried forward, unchanged) ---- */
+  --op-min-contrast-ratio: 3; /* minimum 3:1 — verify per WCAG for text vs. non-text use */
+  --op-min-touch-target: 44px;
+}
+
+/* ============================================================
+   Typography utility classes
+   ============================================================ */
+.op-heading {
+  font-family: var(--op-font-heading);
+  color: var(--op-forest-green);
+}
+
+.op-body {
+  font-family: var(--op-font-body);
+  color: var(--op-root-brown);
+}
+
+/* ============================================================
+   Gradient utility classes — restricted to hero/diagram contexts.
+   Do NOT apply these classes to icons, nav, buttons, or small UI controls.
+   ============================================================ */
+.op-bg-forest-depth    { background: var(--op-gradient-forest-depth); }
+.op-bg-canopy-light    { background: var(--op-gradient-canopy-light); }
+.op-bg-earth-to-growth { background: var(--op-gradient-earth-to-growth); }
+.op-bg-light-in-canopy { background: var(--op-gradient-light-in-canopy); }
+.op-bg-warm-earth      { background: var(--op-gradient-warm-earth); }
+
+/* ============================================================
+   Solid-color utility classes for icons / nav / buttons / small UI
+   ============================================================ */
+.op-fill-forest-green { fill: var(--op-forest-green); color: var(--op-forest-green); }
+.op-fill-moss         { fill: var(--op-moss); color: var(--op-moss); }
+.op-fill-sage         { fill: var(--op-sage); color: var(--op-sage); }
+.op-fill-lichen       { fill: var(--op-lichen); color: var(--op-lichen); }
+.op-fill-warm-cream   { fill: var(--op-warm-cream); color: var(--op-warm-cream); }
+.op-fill-root-brown   { fill: var(--op-root-brown); color: var(--op-root-brown); }
+.op-fill-bark         { fill: var(--op-bark); color: var(--op-bark); }
+.op-fill-sand         { fill: var(--op-sand); color: var(--op-sand); }
+.op-fill-warm-stone   { fill: var(--op-warm-stone); color: var(--op-warm-stone); }
+.op-fill-gold-accent  { fill: var(--op-gold-accent); color: var(--op-gold-accent); }

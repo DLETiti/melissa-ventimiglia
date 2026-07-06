@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+<!-- ============================================================
+     DLE_Web_IconSystem_Osteopatree_v1_0.svg
+     Osteopatree — Icon System built from 4 shared primitives:
+     Circle, Branch, Flow, Growth Ring (per Addendum 01)
+
+     Usage: reference via <svg class="op-icon"><use href="#op-icon-[name]"/></svg>
+     Color: controlled by CSS (stroke="currentColor") — pair with
+     .op-fill-* utility classes from DLE_Web_VisualTokens_Osteopatree_v1_0.css
+     Solid color only — never gradients on icons (per Addendum 01).
+
+     Motion hooks: elements carry data-motion attributes consumed by
+     DLE_Web_Motion_Osteopatree_v1_0.css. No new primitive shapes may be
+     added without a governance update (per Addendum 01).
+     ============================================================ -->
+
+  <!-- ============================================================
+       PRIMITIVES (reference-only defs — not directly rendered)
+       ============================================================ -->
+  <defs>
+    <!-- Circle primitive: single containment ring -->
+    <g id="op-prim-circle">
+      <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </g>
+
+    <!-- Branch primitive: single trunk line with one offshoot -->
+    <g id="op-prim-branch">
+      <path d="M12 20 L12 10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+      <path d="M12 13 L17 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    </g>
+
+    <!-- Flow primitive: single S-curve -->
+    <g id="op-prim-flow">
+      <path d="M5 16 C 9 8, 15 20, 19 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace"/>
+    </g>
+
+    <!-- Growth Ring primitive: two concentric partial arcs -->
+    <g id="op-prim-growth-ring">
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="1"/>
+      <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="2"/>
+    </g>
+  </defs>
+
+  <!-- ============================================================
+       COMPOSED ICONS — 6 How It Works pillars (placeholder labels;
+       swap titles only once Melissa approves pillar mechanism claims
+       — geometry is not content-gated and may ship independently)
+       ============================================================ -->
+
+  <!-- Pillar 1 placeholder: Circle + Growth Ring (origin / core) -->
+  <symbol id="op-icon-pillar-1" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="1"/>
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="2"/>
+  </symbol>
+
+  <!-- Pillar 2 placeholder: Branch + Flow (structure / connection) -->
+  <symbol id="op-icon-pillar-2" viewBox="0 0 24 24">
+    <path d="M12 20 L12 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M12 14 L17 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M5 9 C 8 6, 9 12, 12 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace"/>
+  </symbol>
+
+  <!-- Pillar 3 placeholder: Circle + Branch (containment / growth) -->
+  <symbol id="op-icon-pillar-3" viewBox="0 0 24 24">
+    <circle cx="12" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M12 8 L12 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M12 6 L15 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+  </symbol>
+
+  <!-- Pillar 4 placeholder: Flow + Growth Ring (rhythm / pattern) -->
+  <symbol id="op-icon-pillar-4" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="1"/>
+    <path d="M7 12 C 9 8, 15 16, 17 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace"/>
+  </symbol>
+
+  <!-- Pillar 5 placeholder: Branch + Growth Ring (history / layers) -->
+  <symbol id="op-icon-pillar-5" viewBox="0 0 24 24">
+    <circle cx="12" cy="13" r="3" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="1"/>
+    <circle cx="12" cy="13" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5" data-motion="ring-reveal" data-ring="2"/>
+    <path d="M12 6.5 L12 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+  </symbol>
+
+  <!-- Pillar 6 placeholder: Circle + Flow (movement within boundary) -->
+  <symbol id="op-icon-pillar-6" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M8 13 C 10 9, 14 17, 16 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace"/>
+  </symbol>
+
+  <!-- ============================================================
+       UTILITY ICONS (Workshops / Book / Contact)
+       ============================================================ -->
+
+  <!-- Workshops: Branch + Circle (gathering point on a growing structure) -->
+  <symbol id="op-icon-workshops" viewBox="0 0 24 24">
+    <path d="M12 20 L12 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M12 13 L8 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M12 13 L16 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <circle cx="8" cy="7.5" r="1.5" fill="currentColor" stroke="none"/>
+    <circle cx="16" cy="7.5" r="1.5" fill="currentColor" stroke="none"/>
+    <circle cx="12" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+  </symbol>
+
+  <!-- Book: Flow + Branch (a page-turn curve rising into growth) -->
+  <symbol id="op-icon-book" viewBox="0 0 24 24">
+    <path d="M5 18 C 9 14, 15 22, 19 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace"/>
+    <path d="M12 14 L12 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M12 9 L15 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+    <path d="M12 9 L9 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="branch-extend"/>
+  </symbol>
+
+  <!-- Contact: Flow + Flow (two curves interweaving, per Addendum motion note) -->
+  <symbol id="op-icon-contact" viewBox="0 0 24 24">
+    <path d="M5 8 C 9 8, 9 16, 13 16 C 17 16, 17 8, 19 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace" data-flow="1"/>
+    <path d="M5 16 C 9 16, 9 8, 13 8 C 17 8, 17 16, 19 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" data-motion="flow-trace" data-flow="2"/>
+  </symbol>
+
+</svg>

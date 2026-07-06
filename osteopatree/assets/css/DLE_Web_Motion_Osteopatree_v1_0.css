@@ -1,0 +1,93 @@
+/* ============================================================
+   DLE_Web_Motion_Osteopatree_v1_0.css
+   Osteopatree — Icon Motion Language
+   Source: Visual Direction Addendum 01 (subtle only; never decorative
+   for its own sake; used sparingly on interaction states)
+   Pairs with: DLE_Web_IconSystem_Osteopatree_v1_0.svg
+               (targets elements via [data-motion] attributes)
+   ============================================================ */
+
+.op-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: var(--op-min-touch-target, 44px);
+  min-height: var(--op-min-touch-target, 44px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Respect reduced-motion preference — required, not optional */
+@media (prefers-reduced-motion: reduce) {
+  .op-icon [data-motion] {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ----------------------------------------------------------
+   Growth Ring: rings reveal inward on hover/focus
+   ---------------------------------------------------------- */
+.op-icon [data-motion="ring-reveal"] {
+  transform-origin: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.op-icon:hover [data-motion="ring-reveal"][data-ring="2"],
+.op-icon:focus-visible [data-motion="ring-reveal"][data-ring="2"] {
+  transform: scale(0.94);
+  transition-delay: 0s;
+}
+
+.op-icon:hover [data-motion="ring-reveal"][data-ring="1"],
+.op-icon:focus-visible [data-motion="ring-reveal"][data-ring="1"] {
+  transform: scale(1.08);
+  transition-delay: 0.08s;
+}
+
+/* ----------------------------------------------------------
+   Branch: lines extend slightly outward on hover/focus
+   ---------------------------------------------------------- */
+.op-icon [data-motion="branch-extend"] {
+  transform-origin: bottom center;
+  transition: transform 0.35s ease;
+}
+
+.op-icon:hover [data-motion="branch-extend"],
+.op-icon:focus-visible [data-motion="branch-extend"] {
+  transform: scaleY(1.06);
+}
+
+/* ----------------------------------------------------------
+   Flow: curve traces itself on hover/focus (stroke-dash reveal)
+   ---------------------------------------------------------- */
+.op-icon [data-motion="flow-trace"] {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.op-icon:hover [data-motion="flow-trace"],
+.op-icon:focus-visible [data-motion="flow-trace"] {
+  stroke-dashoffset: 6;
+}
+
+/* Contact icon special case: two flows interweave in slight counter-motion */
+.op-icon:hover [data-motion="flow-trace"][data-flow="1"],
+.op-icon:focus-visible [data-motion="flow-trace"][data-flow="1"] {
+  stroke-dashoffset: 6;
+}
+.op-icon:hover [data-motion="flow-trace"][data-flow="2"],
+.op-icon:focus-visible [data-motion="flow-trace"][data-flow="2"] {
+  stroke-dashoffset: -6;
+}
+
+/* ----------------------------------------------------------
+   Accessible focus ring (color never the sole carrier of meaning —
+   pair icons with visible text labels per Addendum 01 accessibility note)
+   ---------------------------------------------------------- */
+.op-icon:focus-visible {
+  outline: 2px solid var(--op-gold-accent, #C9A15C);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
