@@ -57,7 +57,7 @@
    Using Forest Green (8.47:1 with Warm Cream text) rather than
    Moss (4.28:1 — AA-Large only, fails full AA for body text).
    ---------------------------------------------------------- */
-.site-footer {
+footer.site-footer {
   background: var(--op-forest-green);
   color: var(--op-warm-cream);
   font-family: var(--op-font-body);

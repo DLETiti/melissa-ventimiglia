@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://osteopatree.netlify.app/sitemap.xml
+Disallow: /

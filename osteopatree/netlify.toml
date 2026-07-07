@@ -19,3 +19,8 @@
 
   [plugins.inputs]
     output_path = "reports/lighthouse.html"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

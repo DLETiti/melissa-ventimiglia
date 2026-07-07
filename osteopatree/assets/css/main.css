@@ -1,28 +1,28 @@
 /* =====================================================================
    OSTEOPATREE — main.css
    -----------------------------------------------------------------
-   PLACEHOLDER PALETTE — DO NOT TREAT AS PRODUCTION VALUES.
-   Only the palette NAME (Living Canopy: forest green / cream /
-   root-brown / gold accent) is locked. Exact hex values and the
-   typeface have not been confirmed by Melissa. Values below are
-   provisional approximations for scaffold/structure review only —
-   same gap pattern as Astrid's pre-CSS typography confirmation.
-   Route an HR to Melissa V for confirmed hex + font before this
-   becomes a production stylesheet.
+   Living Canopy palette and typography are LOCKED per Visual
+   Direction Addendum 01 (2026-07-05), under DLE/Titi visual-system
+   authority — not a Melissa content-approval item. Canonical values
+   live in DLE_Web_VisualTokens_Osteopatree_v1_0.css; --color-* below
+   are aliases only, do not redefine with literal hex here.
    ===================================================================== */
 
 :root {
-  /* --- PLACEHOLDER Living Canopy palette --- */
-  --color-forest: #2F4A3D;      /* PLACEHOLDER */
-  --color-cream: #F7F3EA;       /* PLACEHOLDER */
-  --color-root-brown: #6B4A34;  /* PLACEHOLDER */
-  --color-gold: #C9A24B;        /* PLACEHOLDER */
+  /* --- Living Canopy palette — locked per Addendum 01, sourced from
+     DLE_Web_VisualTokens_Osteopatree_v1_0.css. Do not hardcode hex
+     here; these alias the canonical --op-* tokens so main.css and
+     the component system share one source of truth. --- */
+  --color-forest: var(--op-forest-green);
+  --color-cream: var(--op-warm-cream);
+  --color-root-brown: var(--op-root-brown);
+  --color-gold: var(--op-gold-accent);
   --color-text: #232323;
   --color-white: #FFFFFF;
 
-  /* --- PLACEHOLDER typography — font family unconfirmed --- */
-  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-heading: var(--font-body);
+  /* --- Typography — locked per Addendum 01 --- */
+  --font-body: var(--op-font-body);
+  --font-heading: var(--op-font-heading);
 
   /* Type scale per Website Services Design Standards §4 */
   --h1-desktop: 52px;
