@@ -25,7 +25,7 @@
           <p class="session-date">{{ .date }}{{ with .time }} - {{ . }}{{ end }}</p>
           <p class="session-location">{{ .location }}</p>
         </div>
-        <a class="btn" href="{{ .cal_link }}" target="_blank" rel="noopener">Book this session</a>
+        <a class="op-btn op-btn-primary" href="{{ .cal_link }}" target="_blank" rel="noopener">Book this session</a>
       </li>
       {{ end }}
     </ul>

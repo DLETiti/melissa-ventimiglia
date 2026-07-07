@@ -1,0 +1,131 @@
+/* ============================================================
+   DLE_Web_Components_Osteopatree_v1_0.css
+   Osteopatree — Component Styles (Nav, Footer, Buttons)
+   Built on: DLE_Web_VisualTokens_Osteopatree_v1_0.css (must load first)
+   Source: Visual Brand Guidance Board v2.1 — Page 3 (Application Guide)
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Navigation
+   ---------------------------------------------------------- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--op-warm-cream);
+  padding: 1rem 1.5rem;
+  font-family: var(--op-font-body);
+}
+
+.site-nav__brand {
+  font-family: var(--op-font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--op-forest-green);
+  text-decoration: none;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.site-nav__links a {
+  color: var(--op-forest-green);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.25rem 0.1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.site-nav__links a:hover,
+.site-nav__links a:focus-visible {
+  border-bottom-color: var(--op-gold-accent);
+}
+
+.site-nav__links a:focus-visible {
+  outline: 2px solid var(--op-gold-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ----------------------------------------------------------
+   Footer
+   ⚠️ Background pending confirmation — see escalation note.
+   Using Forest Green (8.47:1 with Warm Cream text) rather than
+   Moss (4.28:1 — AA-Large only, fails full AA for body text).
+   ---------------------------------------------------------- */
+.site-footer {
+  background: var(--op-forest-green);
+  color: var(--op-warm-cream);
+  font-family: var(--op-font-body);
+  padding: 2rem 1.5rem;
+}
+
+.site-footer a {
+  color: var(--op-warm-cream);
+  text-decoration: underline;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  border-bottom: 2px solid var(--op-gold-accent);
+  text-decoration: none;
+}
+
+.site-footer .wrap {
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------
+   Buttons
+   ---------------------------------------------------------- */
+.op-btn {
+  display: inline-block;
+  font-family: var(--op-font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  min-height: var(--op-min-touch-target, 44px);
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.op-btn-primary {
+  background: var(--op-forest-green);
+  color: var(--op-warm-cream);
+  border: 2px solid var(--op-forest-green);
+}
+
+.op-btn-primary:hover {
+  background: var(--op-moss);
+  border-color: var(--op-moss);
+}
+
+.op-btn-primary:focus-visible {
+  outline: 2px solid var(--op-gold-accent);
+  outline-offset: 2px;
+}
+
+.op-btn-secondary {
+  background: transparent;
+  color: var(--op-root-brown);
+  border: 2px solid var(--op-root-brown);
+}
+
+.op-btn-secondary:hover {
+  background: var(--op-root-brown);
+  color: var(--op-warm-cream);
+}
+
+.op-btn-secondary:focus-visible {
+  outline: 2px solid var(--op-gold-accent);
+  outline-offset: 2px;
+}
