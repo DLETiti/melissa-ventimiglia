@@ -66,13 +66,32 @@ h3 { font-size: var(--h3-mobile); }
 /* Section background alternation — Design Standards §3, client-palette override */
 .section--light { background: var(--color-white); }
 .section--tint  { background: var(--color-cream); }
-.section--hero,
+.section--hero {
+  background: var(--op-gradient-forest-depth);
+  color: var(--color-white);
+}
 .section--cta {
   background: var(--color-forest);
   color: var(--color-white);
 }
 .section--hero a,
 .section--cta a { color: var(--color-gold); }
+
+.section--light a,
+.section--tint a {
+  color: var(--op-forest-green);
+  text-decoration: underline;
+}
+.section--light a:visited,
+.section--tint a:visited {
+  color: var(--op-root-brown);
+}
+.section--light a:hover,
+.section--light a:focus-visible,
+.section--tint a:hover,
+.section--tint a:focus-visible {
+  color: var(--op-gold-accent);
+}
 
 /* Layout */
 .wrap {

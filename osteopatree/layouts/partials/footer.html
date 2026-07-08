@@ -1,6 +1,13 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>&copy; {{ now.Year }} Osteopatree. All rights reserved.</p>
+    <p class="site-footer__icon-links">
+      <a href="{{ "/workshops/" | relURL }}"><svg class="op-icon op-icon--small" aria-hidden="true"><use href="#op-icon-workshops"></use></svg> Workshops</a>
+      {{ if .Site.Params.book_visible }}
+      <a href="{{ "/book/" | relURL }}"><svg class="op-icon op-icon--small" aria-hidden="true"><use href="#op-icon-book"></use></svg> Book</a>
+      {{ end }}
+      <a href="{{ "/contact/" | relURL }}"><svg class="op-icon op-icon--small" aria-hidden="true"><use href="#op-icon-contact"></use></svg> Contact</a>
+    </p>
     <p>
       <a href="{{ "/privacy/" | relURL }}">Privacy Policy</a> ·
       <a href="{{ "/terms/" | relURL }}">Terms of Use</a> ·

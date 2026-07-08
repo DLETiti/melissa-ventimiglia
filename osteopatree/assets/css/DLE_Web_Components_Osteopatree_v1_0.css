@@ -129,3 +129,96 @@ footer.site-footer {
   outline: 2px solid var(--op-gold-accent);
   outline-offset: 2px;
 }
+
+/* ----------------------------------------------------------
+   Icon sizing — inline (heading/button) and small (footer)
+   ---------------------------------------------------------- */
+.op-icon--inline {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin-right: 0.15em;
+}
+
+.op-icon--small {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.1em;
+  margin-right: 0.25em;
+}
+
+.site-footer__icon-links {
+  font-size: 0.95rem;
+  opacity: 1;
+  margin-bottom: 0.5rem;
+}
+
+.site-footer__icon-links a {
+  margin: 0 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.site-footer p:last-child {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+/* ----------------------------------------------------------
+   Mobile navigation — CSS-only hamburger toggle (no JS)
+   ---------------------------------------------------------- */
+.site-nav__toggle-input {
+  display: none;
+}
+
+.site-nav__toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.site-nav__toggle-label span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--op-forest-green);
+  border-radius: 1px;
+}
+
+.site-nav__toggle-input:focus-visible + .site-nav__toggle-label {
+  outline: 2px solid var(--op-gold-accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    flex-wrap: wrap;
+  }
+
+  .site-nav__toggle-label {
+    display: flex;
+  }
+
+  .site-nav__links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .site-nav__links a {
+    margin: 0;
+    padding: 12px 0;
+    border-top: 1px solid var(--op-lichen);
+    width: 100%;
+  }
+
+  .site-nav__toggle-input:checked ~ .site-nav__links {
+    display: flex;
+  }
+}

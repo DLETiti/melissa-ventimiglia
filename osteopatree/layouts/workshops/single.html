@@ -9,7 +9,7 @@
 
 <section class="section section--light">
   <div class="wrap">
-    <h1>{{ .Params.headline | default .Title }}</h1>
+    <h1><svg class="op-icon op-icon--inline" aria-hidden="true"><use href="#op-icon-workshops"></use></svg> {{ .Params.headline | default .Title }}</h1>
     {{ if .Params.placeholder }}
     <p class="content-placeholder"><strong>Draft status:</strong> {{ .Params.placeholder }}</p>
     {{ end }}
@@ -25,7 +25,7 @@
           <p class="session-date">{{ .date }}{{ with .time }} - {{ . }}{{ end }}</p>
           <p class="session-location">{{ .location }}</p>
         </div>
-        <a class="op-btn op-btn-primary" href="{{ .cal_link }}" target="_blank" rel="noopener">Book this session</a>
+        <a class="op-btn op-btn-primary" href="{{ .cal_link }}" target="_blank" rel="noopener"><svg class="op-icon op-icon--inline" aria-hidden="true"><use href="#op-icon-book"></use></svg> Book this session</a>
       </li>
       {{ end }}
     </ul>

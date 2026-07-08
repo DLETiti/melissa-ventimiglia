@@ -9,7 +9,7 @@
 
 <section class="section section--light">
   <div class="wrap">
-    <h1>{{ .Params.headline | default .Title }}</h1>
+    <h1>{{ if eq .Title "Contact" }}<svg class="op-icon op-icon--inline" aria-hidden="true"><use href="#op-icon-contact"></use></svg> {{ end }}{{ .Params.headline | default .Title }}</h1>
     {{ if .Params.placeholder }}
     <p class="content-placeholder"><strong>Draft status:</strong> {{ .Params.placeholder }}</p>
     {{ end }}
